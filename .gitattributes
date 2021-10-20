@@ -1,2 +1,48 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Quiz app</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    Questão 1) Quanto é 2+2?<br>
+<input type="radio" name="questao1" id="correta1"> 4<br>
+<input type="radio" name="questao1"> 5<br>
+<input type="radio" name="questao1"> 6<br>
+<input type="radio" name="questao1"> 7<br>
+
+Questão 2) Quanto é 5*10?<br>
+<input type="radio" name="questao2"> 25<br>
+<input type="radio" name="questao2"> 35<br>
+<input type="radio" name="questao2" id="correta2"> 50<br>
+<input type="radio" name="questao2"> 45<br>
+
+Questão 3) Quanto é 4*5?<br>
+<input type="radio" name="questao3"> 24<br>
+<input type="radio" name="questao3"> 64<br>
+<input type="radio" name="questao3"> 10<br>
+<input type="radio" name="questao3" id="correta3"> 20<br><Br>
+<input type="submit" name="enviar" value="Enviar" onclick="result()">
+
+
+    <script type="text/javascript">
+      function result() {
+  // body...
+  var score = 0;
+
+  if (document.getElementById("correta1").checked) {
+    score++;
+  }
+  if (document.getElementById("correta2").checked) {
+    score++;
+  }
+  if (document.getElementById("correta3").checked) {
+    score++;
+  };
+  alert("Você acertou: "+score+"/3");
+}
+    </script>
+  </body>
+</html>
